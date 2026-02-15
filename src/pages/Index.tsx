@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import FloatingPetals from "@/components/invitation/FloatingPetals";
+import HeroSection from "@/components/invitation/HeroSection";
+import EventDetails from "@/components/invitation/EventDetails";
+import CountdownTimer from "@/components/invitation/CountdownTimer";
+import MapSection from "@/components/invitation/MapSection";
+import RideBooking from "@/components/invitation/RideBooking";
+import RSVPSection from "@/components/invitation/RSVPSection";
+import PhotoGallery from "@/components/invitation/PhotoGallery";
+import ShareSection from "@/components/invitation/ShareSection";
+import InvitationFooter from "@/components/invitation/InvitationFooter";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <FloatingPetals />
+      <main>
+        <HeroSection />
+        <EventDetails />
+        <CountdownTimer />
+        <MapSection />
+        <RideBooking />
+        <RSVPSection />
+        <PhotoGallery />
+        <ShareSection />
+        <InvitationFooter />
+      </main>
     </div>
   );
 };
