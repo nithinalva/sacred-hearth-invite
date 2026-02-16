@@ -22,17 +22,7 @@ const RideBooking = () => {
     {
       name: "Uber",
       className: "ride-btn-uber",
-      onClick: () => openRide(rideLinks.uber.deepLink, rideLinks.uber.fallback),
-    },
-    {
-      name: "Ola",
-      className: "ride-btn-ola",
-      onClick: () => openRide(undefined, rideLinks.ola),
-    },
-    {
-      name: "Rapido",
-      className: "ride-btn-rapido",
-      onClick: () => openRide(undefined, rideLinks.rapido),
+      onClick: () => openRide(rideLinks.uber.fallback, rideLinks.uber.fallback),
     },
   ];
 

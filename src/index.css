@@ -69,10 +69,15 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
   }
 }
 
@@ -82,14 +87,14 @@
   }
   .section-title {
     @apply text-2xl md:text-3xl font-semibold text-center mb-8 text-foreground;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
   }
   .section-divider {
     @apply flex items-center justify-center gap-3 my-2;
   }
   .section-divider::before,
   .section-divider::after {
-    content: '';
+    content: "";
     @apply h-px w-16 bg-primary/40;
   }
   .gold-glow {
@@ -99,10 +104,10 @@
     animation: diya-pulse 2.5s ease-in-out infinite;
   }
   .ride-btn-uber {
-    @apply bg-foreground text-background hover:opacity-90;
+    @apply bg-black text-background hover:opacity-90;
   }
   .ride-btn-ola {
-    background-color: hsl(145 63% 42%);
+    background-color: hsl(45 100% 50%);
     @apply text-background hover:opacity-90;
   }
   .ride-btn-rapido {
@@ -117,11 +122,14 @@
 }
 
 @keyframes diya-pulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 12px hsl(43 76% 48% / 0.5)) drop-shadow(0 0 30px hsl(30 80% 50% / 0.2));
+  0%,
+  100% {
+    filter: drop-shadow(0 0 12px hsl(43 76% 48% / 0.5))
+      drop-shadow(0 0 30px hsl(30 80% 50% / 0.2));
   }
   50% {
-    filter: drop-shadow(0 0 20px hsl(43 76% 48% / 0.7)) drop-shadow(0 0 50px hsl(30 80% 50% / 0.35));
+    filter: drop-shadow(0 0 20px hsl(43 76% 48% / 0.7))
+      drop-shadow(0 0 50px hsl(30 80% 50% / 0.35));
   }
 }
 
@@ -152,6 +160,11 @@
 }
 
 @keyframes gentle-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }

@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, UtensilsCrossed, CalendarPlus } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  UtensilsCrossed,
+  CalendarPlus,
+} from "lucide-react";
 import { eventConfig } from "@/config/eventConfig";
 
 const fadeUp = {
@@ -15,7 +21,10 @@ const EventDetails = () => {
       {/* Hosts */}
       <motion.div {...fadeUp} className="text-center mb-8">
         {eventConfig.hosts.map((host, i) => (
-          <p key={i} className="text-base md:text-lg font-serif text-foreground leading-relaxed">
+          <p
+            key={i}
+            className="text-base md:text-lg font-serif text-foreground leading-relaxed"
+          >
             {host}
           </p>
         ))}
@@ -34,36 +43,72 @@ const EventDetails = () => {
 
       {/* Details Cards */}
       <div className="grid grid-cols-2 gap-3 mt-8">
-        <motion.div {...fadeUp} transition={{ delay: 0.1, duration: 0.6 }} className="invite-card text-center">
+        <motion.div
+          {...fadeUp}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="invite-card text-center"
+        >
           <Calendar className="w-5 h-5 text-primary mx-auto mb-2" />
-          <p className="text-xs text-muted-foreground uppercase tracking-wider">Date</p>
-          <p className="font-serif font-semibold text-sm mt-1">{eventConfig.date}</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider">
+            Date
+          </p>
+          <p className="font-serif font-semibold text-sm mt-1">
+            {eventConfig.date}
+          </p>
         </motion.div>
 
-        <motion.div {...fadeUp} transition={{ delay: 0.2, duration: 0.6 }} className="invite-card text-center">
+        <motion.div
+          {...fadeUp}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="invite-card text-center"
+        >
           <Clock className="w-5 h-5 text-primary mx-auto mb-2" />
-          <p className="text-xs text-muted-foreground uppercase tracking-wider">Time</p>
-          <p className="font-serif font-semibold text-sm mt-1">{eventConfig.time}</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider">
+            Time
+          </p>
+          <p className="font-serif font-semibold text-sm mt-1">
+            {eventConfig.time}
+          </p>
         </motion.div>
 
-        <motion.div {...fadeUp} transition={{ delay: 0.3, duration: 0.6 }} className="invite-card text-center col-span-2">
+        <motion.div
+          {...fadeUp}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="invite-card text-center col-span-2"
+        >
           <MapPin className="w-5 h-5 text-primary mx-auto mb-2" />
-          <p className="text-xs text-muted-foreground uppercase tracking-wider">Venue</p>
-          <p className="font-serif font-semibold text-sm mt-1">{eventConfig.venue}</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider">
+            Venue
+          </p>
+          <p className="font-serif font-semibold text-sm mt-1">
+            {eventConfig.venue}
+          </p>
           {eventConfig.address.map((line, i) => (
-            <p key={i} className="text-xs text-muted-foreground">{line}</p>
+            <p key={i} className=" font-serif text-xs text-muted-foreground ">
+              {line}
+            </p>
           ))}
         </motion.div>
       </div>
 
       {/* Lunch note */}
-      <motion.div {...fadeUp} transition={{ delay: 0.4 }} className="flex items-center justify-center gap-2 mt-6 text-accent">
+      <motion.div
+        {...fadeUp}
+        transition={{ delay: 0.4 }}
+        className="flex items-center justify-center gap-2 mt-6 text-accent"
+      >
         <UtensilsCrossed className="w-4 h-4" />
-        <p className="text-sm font-medium italic font-serif">{eventConfig.note}</p>
+        <p className="text-sm font-medium italic font-serif">
+          {eventConfig.note}
+        </p>
       </motion.div>
 
       {/* Add to Calendar */}
-      <motion.div {...fadeUp} transition={{ delay: 0.5 }} className="text-center mt-6">
+      <motion.div
+        {...fadeUp}
+        transition={{ delay: 0.5 }}
+        className="text-center mt-6"
+      >
         <a
           href={eventConfig.calendarLink}
           target="_blank"
